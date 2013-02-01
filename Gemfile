@@ -1,3 +1,7 @@
-source 'http://rubygems.org'
+source "http://rubygems.org"
 
-gem 'ghost'
+# Specify your gem's dependencies in knife-ghost.gemspec
+gemspec
+
+gem 'ghost', :git => 'https://github.com/bjeanes/ghost.git'
+

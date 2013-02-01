@@ -29,11 +29,10 @@ class Chef
           host = Ghost::Host.new(*[fqdn, ipaddress].compact)
           begin
             Ghost.store.add(host)
-            puts "[Adding] #{host.name} -> #{host.ip}"
+            ui.msg "[Adding] #{host.name} -> #{host.ip}"
           rescue Ghost::Host::NotResolvable
-            abort "Unable to resolve IP address for target host #{ip.inspect}."
+            ui.fatal "Unable to resolve IP address for target host #{ip.inspect}."
           end
-          
         end
       end
     end
