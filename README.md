@@ -17,3 +17,6 @@ Usage
 ---------------
 
     sudo knife ghost hosts
+or if using rvm:
+
+    rvmsudo knife ghost hosts
